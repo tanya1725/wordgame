@@ -1,0 +1,368 @@
+<html>
+<head>
+<script>
+arr=[5];
+arr1=["-","-","-","-","-"];
+arr2=["Hint: Name of a fruit"," Hint: Name of cricketer","Hint: king of fruit","Hint: Main item of carrom","Hint:  priceless"];
+arr3=["wordgameback.gif","wordgameback2.gif","wordgameback3.gif","wordgameback4.gif","wordgameback5.gif"]; 
+
+
+pos=0;
+j=0;
+ctr=0;
+str=0;
+c=1;
+function show()
+{
+document.getElementById("p").src=arr3[pos];
+document.getElementById("message1").innerHTML=arr2[pos];
+document.getElementById("pname1").style.display="none";
+
+}
+
+function  ok1()
+{
+
+
+flg=0;	
+
+			   arr[0]="apple";
+			   arr[1]="dhoni";
+			   arr[2]="mango";
+			   arr[3]="queen";
+			   arr[4]="smile";
+			   
+
+
+
+
+			     str=arr[pos];
+				 
+		     	if(pos<5 )
+				{
+                  ch=document.getElementById("txt1").value.charAt(0);
+				  document.getElementById("txt1").value="";
+				  
+		       for(i=0;i<str.length;i++)
+		         {
+				  
+			       if(ch==str.charAt(i))
+		            {
+				     flg=1;
+
+					
+				window.alert("you do it");
+
+				     arr1[i]=ch;
+
+					  
+			        }
+
+		         }
+		         
+		      for(i=0;i<str.length;i++)
+		       {
+			     document.getElementById("t"+i).value=arr1[i];
+		       }
+		      if(flg==0)
+		       {
+			  ctr++;
+			  window.alert("wrong input left"+ (5-ctr));
+	       }
+
+			   for( j=0;j<5;j++)
+			   {
+                    if(arr1[j]!='-')
+				   {
+					   wflg=1;
+					   
+				   }
+				   else
+				   {
+					   wflg=0;
+					   
+					   break;
+				   }
+			   }
+			   if(wflg==1)
+			   {
+				   window.alert(" congraturation you win");		
+           document.getElementById("score7").innerHTML=5*c;		   
+                 		   
+			       pos++;
+				   c++;
+				   
+                for(i=0;i<5;i++)
+                   { 				   
+                   arr1[i]="-";
+				   }
+			   }
+   for(i=0;i<str.length;i++)
+		       {
+			     document.getElementById("t"+i).innerHTML=arr1[i];
+		       }
+			   document.getElementById("p").src=arr3[pos];
+				 document.getElementById("message1").innerHTML=arr2[pos];
+
+			   }
+}
+			   
+function start()
+{
+document.getElementById("m1") .style.display="grid";
+document.getElementById("m2") .style.display="none";
+document.getElementById("song").src="song1.mp3.mp3";
+song.play();
+} 
+function btn1()
+{
+s=document.getElementById("pname").value;
+document.getElementById("pname1").innerHTML=s;
+document.getElementById("pname").style.display="none";
+document.getElementById("pname1").style.display="grid";
+document.getElementById("btn1").style.display="none";
+}
+
+
+  
+
+
+</script>
+<style>
+
+main
+{
+display:none;
+grid-template-columns:100%
+}
+.main2
+{
+display:grid;
+grid-template-rows:repeat(14,70px);
+grid-template-columns:100%;
+}
+.main3
+{
+display:none;
+grid-template-rows:repeat(14,70px);
+grid-template-columns:100%;
+}
+.heading
+{
+position:relative;
+z-index:1;
+font-size:70px;
+margin-top:-600px;
+margin-left:600px;
+}
+.t1
+{
+margin-left:400px;
+margin-top:-450px;
+background-color:white;
+position:relative;
+z-index:1;
+
+font-size:40px;
+
+}
+.t2
+{
+margin-left:530px;
+margin-top:-450px;
+
+font-size:40px;
+}
+.t3
+{
+margin-left:660px;
+margin-top:-450px;
+
+font-size:40px;
+}
+.t4
+{
+margin-left:790px;
+margin-top:-450px;
+
+font-size:40px;
+}
+.t5
+{
+margin-left:920px;
+margin-top:-450px;
+
+font-size:40px;
+}
+.enter
+{
+margin-left:500px;
+margin-top:-290px;
+font-size:20px;
+position:relative;
+z-index:1;
+}
+.txt1
+{
+margin-left:650px;
+margin-top:-300px;
+width:180px;
+height:50px;
+position:relative;
+z-index:1;
+border:1px solid black;
+border-radius:20px 20px 20px 20px;
+
+}
+.txt1:hover
+{
+box-shadow:2px 2px 20px white;
+}
+.ok
+{
+margin-left:860px;
+margin-top:-290px;
+position:relative;
+z-index:1;
+width:50px;
+height:40px;
+}
+.message
+{
+position:relative;
+z-index:1;
+margin-top:-360px;
+margin-left:500px;
+width:400px;
+height:50px;
+color:white;
+font-size:20px;
+}
+.score1
+{
+background-color:white;
+position:relative;
+z-index:1;
+margin-top:-110px;
+margin-left:1300px;
+width:150px;
+height:50px;
+}
+.score2
+{
+background-color:white;
+position:relative;
+z-index:1;
+margin-top:-170px;
+margin-left:1270px;
+width:180px;
+height:50px;
+}
+.score3
+{
+background-color:white;
+position:relative;
+z-index:1;
+margin-top:-230px;
+margin-left:1250px;
+width:200px;
+height:50px;
+}
+.score4
+{
+background-color:white;
+position:relative;
+z-index:1;
+margin-top:-290px;
+margin-left:1220px;
+width:230px;
+height:50px;
+}
+.score5
+{
+background-color:white;
+position:relative;
+z-index:1;
+margin-top:-350px;
+margin-left:1190px;
+width:260px;
+height:50px;
+}
+.pname
+{
+background-color:black;
+position:relative;
+z-index:1;
+margin-top:-730px;
+margin-left:1160px;
+width:290px;
+height:50px;
+border-radius:20px 20px 20px 20px;
+border:2px solid white;
+color:white;
+font-weight:bold;
+
+}
+.score7
+{
+background-color:white;
+
+margin-top:-660px;
+margin-left:1220px;
+width:200px;
+height:50px;
+border-radius:20px 20px 20px 20px;
+text-align:center;
+font-size:40px;
+
+}
+.btn1
+{
+margin-top:-730px;
+margin-left:1380px;
+position:relative;
+z-index:1;
+width:70px;
+height:50px;
+border-radius:0px 20px 20px 0px;
+}
+.pname1
+{
+margin-top:-730px;
+margin-left:1160px;
+width:290px;
+height:50px;
+color:white;
+box-shadow:2px 2px 20px white;
+font-weight:bold;
+border-radius:20px 20px 20px 20px;
+text-align:center;
+font-size:20px;
+}
+</style>
+</head>
+<body onload="show()" >
+<main id="m1">
+<div class="background"><img src="" id= "p"  style="width:1450px; height:740px;"></div>
+<div class="heading"><font face="Bernard MT Condensed" color=white>Word game </font></div>
+<div class="t1" id="t0" style="width:100px; height:50px; "></div>
+<div class="t2" id="t1" style="width:100px; height:50px;background-color:white;position:relative;z-index:1;" ></div>
+<div class="t3" id="t2" style="width:100px; height:50px;background-color:white;position:relative;z-index:1;"></div>
+<div class="t4" id="t3" style="width:100px; height:50px;background-color:white;position:relative;z-index:1;"></div>
+<div class="t5" id="t4" style="width:100px; height:50px;background-color:white;position:relative;z-index:1;"></div>
+<div class="enter"><label  >Enter a character</label></div>
+<input type="text" placeholder="enter a character" class="txt1" id="txt1"></input>
+<div  ><button class="ok"onclick="ok1()">ok</button></div>
+<label class="message" id="message1"></label>
+<input type="text" placeholder="player name" id="pname" class="pname"></input>
+<label class="score7" id="score7"> 0</label>
+<label class="pname1" id="pname1"> </label>
+<button class="btn1" id="btn1" onclick="btn1()">submit</button><audio id="aashiquiau1"><source src="aashiquisong1.mp3.mp3"></audio>
+
+</main>
+<main2 id="m2">
+<div class="startbackground" onclick="start()"><img src="start.jpg"width=100% height=100%></div>
+<audio id="song"><source src="song1.mp3.mp3"></audio>
+</main2>
+</body>
+</html>
